@@ -1,3 +1,13 @@
+# AWS Zero to Hero
+
+What is AWS you say? Don't worry I will give you company while we demistify AWS togather :)
+
+## What is AWS and why we need it
+Not long time ago the only way to host website, API service etc was renting or buying a server on a farm. To "organize" a server you needed to send your requirement to Farm's sales team which will then give you quotes, which once agreed will then be over to Farm's technical dept to arrange access to those server and god forbid if they are out of capacity meaning you are stuck for months.
+And then came AWS (Amazon Web Services) and changed all that, world was bright again birds tweeting and children laughing :)
+With AWS you can book a server for few seconds, upgrade and increase number in no time, no contracts, anywhere in the world paid by your credit card. Best of all you can try this all for FREE for a year.
+Thats what I recommend you to use AWS free tier, create an account and for next one year you wont pay a anything for many AWS services. A very good deal I say, [create account](https://aws.amazon.com/)
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/vikramaditya234/vikramaditya234.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
