@@ -1,0 +1,32 @@
+## Bash
+#### Dump HTTP header using wget
+Using `wget` this will also download the content:
+    $ wget --server-response http://www.example.com/
+
+Using `curl` :
+    $ curl -I http://www.example.com/
+
+#### Sum of columns
+`<cmd> | paste -sd+ - | bc`
+`paste -sd <file> | bc`
+
+#### Get column from input (split by delimiter)
+`<cmd> | cut -d' ' -f14` (' ' as delimiter picking text at 14th position)
+
+#### Get character at position from input
+`<cmd> | cut -d2 (get character at 2 position)`
+
+#### Count word, character and lines
+`wc <file>`
+
+#### Delete blank lines
+`:g/^$/d`
+
+## NodeJs
+#### String to buffer
+`var buf = Buffer.from(bufStr, 'utf8');`
+
+## Ubuntu
+####Update time, this can mess up SSL certs because they can be future dated
+`ntpdate ntp.ubuntu.com`
+
