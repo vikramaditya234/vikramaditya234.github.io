@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Bash commands"
-excerpt: "Some commands that I serached for"
+excerpt: "Some commands that I looked for"
 date:   2018-02-16
 tags: [coding, bash]
 categories: coding
@@ -17,14 +17,14 @@ Using `curl`
 
 #### Sum of columns 
 Get sum of columns in file or from command
-` | paste -sd+ - | bc`
+`<cmd> | paste -sd+ - | bc`
 `paste -sd <file> | bc` 
 
 #### Get column from input (split by delimiter) 
-` | cut -d' ' -f14` (' ' as delimiter picking text at 14th position) 
+`<cmd> | cut -d' ' -f14` (' ' as delimiter picking text at 14th position) 
 
 #### Get character at position from input 
-` | cut -d2` (get character at 2 position)
+`<cmd> | cut -d2` (get character at 2 position)
 
 #### Count word, character and lines 
 `wc ` 
