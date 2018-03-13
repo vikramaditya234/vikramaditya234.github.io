@@ -16,8 +16,10 @@ Using `curl`
 > $ curl -I http://www.example.com/
 
 #### Sum of columns 
-Get sum of columns in file or from command
+Get sum of columns from command
 `<cmd> | paste -sd+ - | bc`
+
+Get sum of columns in a file
 `paste -sd <file> | bc` 
 
 #### Get column from input (split by delimiter) 
@@ -35,3 +37,6 @@ Get sum of columns in file or from command
 #### Update time in ubuntu
 *this can mess up SSL certs because they can be future dated*
 `ntpdate ntp.ubuntu.com`
+
+#### Get high response time in access log
+`awk '{print $NF,$0}' <file> | sort -rn | head`
