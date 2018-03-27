@@ -40,3 +40,12 @@ Get sum of columns in a file
 
 #### Get high response time in access log
 `awk '{print $NF,$0}' <file> | sort -rn | head`
+
+#### Replace string
+`echo "Replace abc with xyz" | tr abc xyz`
+
+#### Gobal search and replace in VI
+`:%s/search_string/replacement_string/g`
+
+#### VI remove duplicate lines in file
+`:sort u`
