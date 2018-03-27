@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Share session acorss subdomains"
+title:  "Share session across subdomains"
 excerpt: "Set session cookie to .mydomain.com instead of mydomain.com"
 date:   2018-02-16
 tags: [coding, php]
@@ -8,12 +8,13 @@ categories: coding
 comments: true
 ---
 #### Problem
-We have a bunch of subdomains and we want to share session acorss all of them. Subdomain list:
+We have a bunch of subdomains and we want to share session across all of them. Subdomain list:
 {% highlight css %}
 sub1.mydomain.com
 sub2.mydomain.com
 sub3.mydomain.com
 {% endhighlight %}
+
 #### Code and Solution
 Change session cookie to: `.mydomain.com` Done! *Note: `.` in the start of domain*
 
