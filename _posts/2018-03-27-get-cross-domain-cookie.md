@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Share cookie across domains"
-excerpt: "Get example.com's cookie while me.com is loaded"
+excerpt: "Get vendor.com's cookie while client.com is loaded"
 date:   2018-03-27
 tags: [coding, javascript, cors]
 categories: coding
@@ -28,6 +28,15 @@ Header set Access-Control-Allow-Credentials: true
 {% endhighlight %}
 
 #### Explanation
-Cookie cannot be sent from one domain to another, even on sub domains there are restrictions ([read here to get around sub domain](/articles/2018-02/share-session-across-subdomains)). The cookie can only be read by the domain which has set it, this to avoid man-in-the-middle attack where hackers steal your cookie and hacks you account. Thats the reason `client.com` needs to call `vendor.com` from the browser. But calling javascript/resource request to another domain is not allowed by the browser due to same-origin policy. This policy is needed as rouge sites which you open in your browser otherwise will be able to issue API request to site like `gmail.com` or `facebook.com` to which your are already logged in, these request will go through due to precense of the cookie in the browser.
-To get around same-origin policy we have to use (CORS)[https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS], which is relaxation of this security. Following CORS rules  you make changes in the server of `vendor.com` to send header stating `client.com` is allowed to use the resource (Access-Control-Allow-Origin header). By using this cross domain request is allowed but this will not send the cookie, to send the cookie we need to allow the credentials (Access-Control-Allow-Credentials), by setting the header in the server and using `withCredentials` as part of the request.
-Simple isn't it :)
+There are three security features we have to get around: 
+1. Cookie cannot be read by any domain other than one which has set it
+2. Allow request to different domain than the origin site
+3. Send cookie as part of this request
+
+1. Cookie in the web world is like gold, because if it leaks people can lose money, this is known has session hijacking. Session hijacking or cookie hijacking is where hacker steals your cookie and then can do actions on the website on your behalf. Example if your `gmail.com` cookie is hijacked then hacker can delete all your mails! Hence reputed browsers secures cookie by restricting who reads and writes it, even sub domains are restricted to use cookie set by main domain ([read here to get around sub domain](/articles/2018-02/share-session-across-subdomains)). That’s the reason `client.com` needs to call `vendor.com` from the browser, so `vendor.com` will read the cookie and reply back appropriate response.
+
+2. Loading of javascript from different domain than one is loaded is restricted (same-origin policy) as otherwise rouge sites or scripts, which you might launch in your browser, which would issue API request to site like `gmail.com` or `twitter.com` or any other site to which you are already logged in. These malevolent requests will go through due to presence of the cookie in the browser. To get past this we have to make change in the server to pass the header stating `client.com` can call API to `vendor.com`, hence using *Access-Control-Allow-Origin*. This is part of CORS[https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS], which is relaxation of this security.
+
+3. Even after using *Access-Control-Allow-Origin*, cookie will not be passed as part of header of API call, that due to again, you guess it *Security!!*. To enable that we add another header in the response from server which is *Access-Control-Allow-Credentials*, apart from server change we would need change the JSON request (using `withCredentials`) to tell browser to send cookie as part of the request.
+
+There you have it, get cookie from different domain than the one that is loaded in browser. Simple isn't it :)
