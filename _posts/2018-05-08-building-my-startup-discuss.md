@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Discuss the idea"
+title:  "1 - Discuss the idea"
 excerpt: "Easy and cheap way to validate your idea"
 date:   2018-05-08
 tags: [management, borvo care]
@@ -10,7 +10,7 @@ comments: true
 
 # Discuss the idea
 
-First lesson of lean startup, before doing anything else discuss your ideas with as many people as possible. So that's what I did. Actually I had two ideas that was trying to run with this one (Borvo Care) and other was around event management (Read here). Talking to people it became clear Borvo Care was the winner of two, people instantly related to it and not just Indians but people from other countries too. I know it always difficult to share your idea with people what if they laugh, tease you, criticize the idea and worst of all if they steal it. Obviously you start with your close friends and family and don't worry no one is going to steal the idea. There are plenty of ideas out there, ideas have no value by itself but it's the implementation that matters.
+First lesson of lean startup, before doing anything else discuss your ideas with as many people as possible. So that's what I did. Actually I had two ideas that was trying to run with this one (Borvo Care) and other was around event management ([Read here](https://vikramaditya234.github.io/articles/2018-05/building-my-startup-other-idea)). Talking to people it became clear Borvo Care was the winner of two, people instantly related to it and not just Indians but people from other countries too. I know it always difficult to share your idea with people what if they laugh, tease you, criticize the idea and worst of all if they steal it. Obviously you start with your close friends and family and don't worry no one is going to steal the idea. There are plenty of ideas out there, ideas have no value by itself but it's the implementation that matters.
 
 The only time I was a little nervous discussing the idea was when I was talking to my CTO about it. But he was very supportive and provided good feedback and his reaction helped me take this more seriously.
 
