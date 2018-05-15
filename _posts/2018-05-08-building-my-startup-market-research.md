@@ -2,7 +2,7 @@
 layout: post
 title:  "2 - Market research"
 excerpt: "Very important"
-date:   2018-05-14
+date:   2018-05-8
 tags: [management, borvo care]
 categories: management
 comments: true

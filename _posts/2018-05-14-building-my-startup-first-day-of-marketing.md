@@ -2,7 +2,7 @@
 layout: post
 title:  "3 - First day of marketing"
 excerpt: "It's always scary"
-date:   2018-05-08
+date:   2018-05-14
 tags: [management, borvo care]
 categories: management
 comments: true
